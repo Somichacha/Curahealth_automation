@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.0 on win32)" generated="2026-09-02T12:04:26.789758" rpa="false" schemaversion="5">
+<suite id="s1" name="Create Appointment" source="C:\Users\Zion\PycharmProjects\Curahealth_automation\tests\Create_Appointment.robot">
+<test id="s1-t1" name="Verify Curahealth Homepage Is Opened" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-09-02T12:04:27.485754" level="INFO">Opening browser 'Chrome' to base url 'https://katalon-demo-cura.herokuapp.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-02T12:04:27.484662" elapsed="9.816708"/>
+</kw>
+<kw name="Open Curahealth Homepage" owner="Mykeywords">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-09-02T12:04:37.303224" elapsed="0.046974"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:04:37.351856" level="INFO">Clicking element 'id:menu-toggle'.</msg>
+<arg>${TOGGLE_MENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:04:37.350716" elapsed="0.189975"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:04:37.542113" level="INFO">Clicking element '//*[@id="sidebar-wrapper"]/ul/li[3]/a'.</msg>
+<arg>${LOGIN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:04:37.541222" elapsed="1.094040"/>
+</kw>
+<doc>Open Curahealth Browser and Load Homepage</doc>
+<status status="PASS" start="2026-09-02T12:04:37.302358" elapsed="1.333191"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-09-02T12:04:38.635964" elapsed="2.419045"/>
+</kw>
+<doc>This test case checks if the Curahealth homepage is opened successfully.</doc>
+<status status="PASS" start="2026-09-02T12:04:27.482947" elapsed="13.572252"/>
+</test>
+<test id="s1-t2" name="Check Login With Invalid Credentials" line="15">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-09-02T12:04:41.056719" level="INFO">Opening browser 'Chrome' to base url 'https://katalon-demo-cura.herokuapp.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-02T12:04:41.056347" elapsed="6.098878"/>
+</kw>
+<kw name="Login Curahealth Invalid Credentials" owner="Mykeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:04:47.158495" level="INFO">Clicking element 'id:menu-toggle'.</msg>
+<arg>${TOGGLE_MENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:04:47.157440" elapsed="0.136156"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:04:47.295351" level="INFO">Clicking element '//*[@id="sidebar-wrapper"]/ul/li[3]/a'.</msg>
+<arg>${LOGIN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:04:47.294248" elapsed="0.795886"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:04:48.092118" level="INFO">Typing text 'InvalidUser' into text field 'id:txt-username'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${INVALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:04:48.090881" elapsed="0.208945"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:04:48.301383" level="INFO">Typing text 'InvalidPass' into text field 'id:txt-password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:04:48.300376" elapsed="0.147866"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:04:48.449558" level="INFO">Clicking button 'id:btn-login'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:04:48.448666" elapsed="0.633976"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INVALID_LOGIN_MESSAGE}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-02T12:04:49.082960" elapsed="0.053961"/>
+</kw>
+<doc>Login to Curahealth with invalid credentials</doc>
+<status status="PASS" start="2026-09-02T12:04:47.156332" elapsed="1.980836"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-09-02T12:04:49.137497" elapsed="2.348199"/>
+</kw>
+<doc>This test case verifies that invalid credentials fail to login.</doc>
+<status status="PASS" start="2026-09-02T12:04:41.055715" elapsed="10.430175"/>
+</test>
+<test id="s1-t3" name="Check Login With Valid Credentials" line="19">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-09-02T12:04:51.487582" level="INFO">Opening browser 'Chrome' to base url 'https://katalon-demo-cura.herokuapp.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-02T12:04:51.487187" elapsed="5.130675"/>
+</kw>
+<kw name="Login Curahealth" owner="Mykeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:04:56.620405" level="INFO">Clicking element 'id:menu-toggle'.</msg>
+<arg>${TOGGLE_MENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:04:56.619887" elapsed="0.088744"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:04:56.710011" level="INFO">Clicking element '//*[@id="sidebar-wrapper"]/ul/li[3]/a'.</msg>
+<arg>${LOGIN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:04:56.709268" elapsed="0.886087"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${USERNAME_FIELD}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-02T12:04:57.595690" elapsed="0.022905"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:04:57.619390" level="INFO">Typing text 'John Doe' into text field 'id:txt-username'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${VALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:04:57.618881" elapsed="0.115401"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${USERNAME_FIELD}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-02T12:04:57.734594" elapsed="0.016852"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:04:57.752350" level="INFO">Typing text 'ThisIsNotAPassword' into text field 'id:txt-password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:04:57.751811" elapsed="0.141352"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:04:57.894613" level="INFO">Clicking button 'id:btn-login'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:04:57.893671" elapsed="0.121069"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SUCCESS_LOGIN_MESSAGE}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-02T12:04:58.015218" elapsed="1.715913"/>
+</kw>
+<doc>Login to Curahealth with valid credentials</doc>
+<status status="PASS" start="2026-09-02T12:04:56.619154" elapsed="3.112364"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-09-02T12:04:59.731942" elapsed="2.334635"/>
+</kw>
+<doc>This test case verifies that a user can log in with valid credentials.</doc>
+<status status="PASS" start="2026-09-02T12:04:51.486525" elapsed="10.580227"/>
+</test>
+<test id="s1-t4" name="Verify Appointment Creation" line="23">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-09-02T12:05:02.068964" level="INFO">Opening browser 'Chrome' to base url 'https://katalon-demo-cura.herokuapp.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-02T12:05:02.068361" elapsed="17.198155"/>
+</kw>
+<kw name="Login Curahealth" owner="Mykeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:05:19.268022" level="INFO">Clicking element 'id:menu-toggle'.</msg>
+<arg>${TOGGLE_MENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:05:19.267573" elapsed="0.091277"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:05:19.360033" level="INFO">Clicking element '//*[@id="sidebar-wrapper"]/ul/li[3]/a'.</msg>
+<arg>${LOGIN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:05:19.359251" elapsed="0.614680"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${USERNAME_FIELD}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-02T12:05:19.974398" elapsed="0.029468"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:05:20.005115" level="INFO">Typing text 'John Doe' into text field 'id:txt-username'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${VALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:05:20.004321" elapsed="0.137352"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${USERNAME_FIELD}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-02T12:05:20.142099" elapsed="0.034731"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:05:20.177703" level="INFO">Typing text 'ThisIsNotAPassword' into text field 'id:txt-password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:05:20.177167" elapsed="0.119224"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:05:20.297164" level="INFO">Clicking button 'id:btn-login'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:05:20.296714" elapsed="0.952327"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SUCCESS_LOGIN_MESSAGE}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-02T12:05:21.249346" elapsed="0.019465"/>
+</kw>
+<doc>Login to Curahealth with valid credentials</doc>
+<status status="PASS" start="2026-09-02T12:05:19.267044" elapsed="2.002135"/>
+</kw>
+<kw name="Make Appointment" owner="Mykeywords">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:05:21.270672" level="INFO">Selecting options from selection list 'id:combo_facility' by value Hongkong CURA Healthcare Center.</msg>
+<arg>${FACILITY_FIELD}</arg>
+<arg>${FACILITY_VALUE}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-09-02T12:05:21.270203" elapsed="0.100431"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:05:21.371307" level="INFO">Selecting checkbox 'id:chk_hospotal_readmission'.</msg>
+<arg>${HOSPITAL_READMISSION_CHECKBOX}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:05:21.370899" elapsed="0.097725"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:05:21.469687" level="INFO">Clicking element 'xpath=//input[@id="radio_program_medicare"]'.</msg>
+<arg>${MEDICARE_RADIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:05:21.469039" elapsed="0.071324"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:05:21.542977" level="INFO">Typing text '12/12/2026' into text field 'id:txt_visit_date'.</msg>
+<arg>${VISIT_DATE_FIELD}</arg>
+<arg>${VISIT_DATE_VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:05:21.540949" elapsed="0.202309"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:05:21.744229" level="INFO">Typing text 'This is a test appointment.' into text field 'id:txt_comment'.</msg>
+<arg>${COMMENT_FIELD}</arg>
+<arg>${COMMENT_VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:05:21.743621" elapsed="0.154502"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-02T12:05:21.899255" level="INFO">Clicking button 'id:btn-book-appointment'.</msg>
+<arg>${BOOK_APPOINTMENT_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T12:05:21.898527" elapsed="0.110795"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SUCCESS_BOOKING_MESSAGE}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-02T12:05:22.009652" elapsed="0.403470"/>
+</kw>
+<doc>Make an appointment in Curahealth</doc>
+<status status="PASS" start="2026-09-02T12:05:21.269602" elapsed="1.143821"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-09-02T12:05:22.413856" elapsed="2.352287"/>
+</kw>
+<doc>This test case verifies that a user can make an appointment successfully.</doc>
+<status status="PASS" start="2026-09-02T12:05:02.067359" elapsed="22.699044"/>
+</test>
+<doc>Validate the homepage and login functionality of the Curahealth website using the Page Object Approach.</doc>
+<status status="PASS" start="2026-09-02T12:04:26.820009" elapsed="57.947836"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Create Appointment" id="s1" pass="4" fail="0" skip="0">Create Appointment</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

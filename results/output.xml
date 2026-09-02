@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.0 on win32)" generated="2026-09-02T12:12:43.342900" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\Zion\PycharmProjects\Curahealth_automation\tests">
+<suite id="s1-s1" name="Create Appointment" source="C:\Users\Zion\PycharmProjects\Curahealth_automation\tests\Create_Appointment.robot">
+<test id="s1-s1-t1" name="Verify Curahealth Homepage Is Opened" line="11">
+<kw name="Open Browser" type="SETUP">
+<msg time="2026-09-02T12:12:43.443986" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="FAIL" start="2026-09-02T12:12:43.443540" elapsed="0.000543">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Close All Browsers" type="TEARDOWN">
+<msg time="2026-09-02T12:12:43.446089" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" start="2026-09-02T12:12:43.446016" elapsed="0.000151">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc>This test case checks if the Curahealth homepage is opened successfully.</doc>
+<status status="FAIL" start="2026-09-02T12:12:43.440787" elapsed="0.005782">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-s1-t2" name="Check Login With Invalid Credentials" line="15">
+<kw name="Open Browser" type="SETUP">
+<msg time="2026-09-02T12:12:43.448909" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="FAIL" start="2026-09-02T12:12:43.448840" elapsed="0.000138">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Close All Browsers" type="TEARDOWN">
+<msg time="2026-09-02T12:12:43.451263" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" start="2026-09-02T12:12:43.451163" elapsed="0.000205">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc>This test case verifies that invalid credentials fail to login.</doc>
+<status status="FAIL" start="2026-09-02T12:12:43.447324" elapsed="0.004540">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-s1-t3" name="Check Login With Valid Credentials" line="19">
+<kw name="Open Browser" type="SETUP">
+<msg time="2026-09-02T12:12:43.455275" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="FAIL" start="2026-09-02T12:12:43.455194" elapsed="0.000162">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Close All Browsers" type="TEARDOWN">
+<msg time="2026-09-02T12:12:43.458500" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" start="2026-09-02T12:12:43.458387" elapsed="0.000198">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc>This test case verifies that a user can log in with valid credentials.</doc>
+<status status="FAIL" start="2026-09-02T12:12:43.453125" elapsed="0.005918">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-s1-t4" name="Verify Appointment Creation" line="23">
+<kw name="Open Browser" type="SETUP">
+<msg time="2026-09-02T12:12:43.462785" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="FAIL" start="2026-09-02T12:12:43.462689" elapsed="0.000203">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Close All Browsers" type="TEARDOWN">
+<msg time="2026-09-02T12:12:43.464729" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" start="2026-09-02T12:12:43.464624" elapsed="0.000181">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc>This test case verifies that a user can make an appointment successfully.</doc>
+<status status="FAIL" start="2026-09-02T12:12:43.460461" elapsed="0.004695">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<doc>Validate the homepage and login functionality of the Curahealth website using the Page Object Approach.</doc>
+<status status="FAIL" start="2026-09-02T12:12:43.431066" elapsed="0.035493"/>
+</suite>
+<status status="FAIL" start="2026-09-02T12:12:43.344959" elapsed="0.123267"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="4" skip="0">Tests</stat>
+<stat name="Create Appointment" id="s1-s1" pass="0" fail="4" skip="0">Tests.Create Appointment</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-09-02T12:12:43.434982" level="ERROR">Error in file 'C:\Users\Zion\PycharmProjects\Curahealth_automation\tests\Create_Appointment.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Zion\PycharmProjects\Curahealth_automation\.venv\Scripts\robot.exe
+  C:\Users\Zion\PycharmProjects\Curahealth_automation\.venv\Scripts\python314.zip
+  C:\Users\Zion\AppData\Local\Programs\Python\Python314\DLLs
+  C:\Users\Zion\AppData\Local\Programs\Python\Python314\Lib
+  C:\Users\Zion\AppData\Local\Programs\Python\Python314
+  C:\Users\Zion\PycharmProjects\Curahealth_automation\.venv
+  C:\Users\Zion\PycharmProjects\Curahealth_automation\.venv\Lib\site-packages</msg>
+<msg time="2026-09-02T12:12:43.436692" level="ERROR">Error in file 'C:\Users\Zion\PycharmProjects\Curahealth_automation\tests\Create_Appointment.robot' on line 4: Resource file 'resources\Variables.robot' does not exist.</msg>
+<msg time="2026-09-02T12:12:43.438302" level="ERROR">Error in file 'C:\Users\Zion\PycharmProjects\Curahealth_automation\tests\Create_Appointment.robot' on line 5: Resource file 'resources\Mykeywords.robot' does not exist.</msg>
+</errors>
+</robot>

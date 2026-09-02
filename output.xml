@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.0 on win32)" generated="2026-08-31T12:33:28.729690" rpa="false" schemaversion="5">
+<suite id="s1" name="Create Appointment" source="C:\Users\Zion\PycharmProjects\Curahealth_automation\tests\Create_Appointment.robot">
+<test id="s1-t1" name="Verify Curahealth Homepage Is Opened" line="10">
+<kw name="Open Curahealth Homepage" owner="Mykeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-08-31T12:33:29.476256" level="INFO">Opening browser 'Chrome' to base url 'https://katalon-demo-cura.herokuapp.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-08-31T12:33:29.475776" elapsed="79.597871"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-08-31T12:34:49.074236" elapsed="0.079144"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SIDE_BAR_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-31T12:34:49.153984" elapsed="0.284468"/>
+</kw>
+<doc>Open Curahealth Browser and Load Homepage</doc>
+<status status="PASS" start="2026-08-31T12:33:29.474068" elapsed="79.964635"/>
+</kw>
+<doc>This test case checks if the Curahealth homepage is opened successfully.</doc>
+<status status="PASS" start="2026-08-31T12:33:29.472669" elapsed="79.966674"/>
+</test>
+<test id="s1-t2" name="Check Login With Invalid Credentials" line="14">
+<kw name="Login Curahealth Invalid Credentials" owner="Mykeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-31T12:34:49.442338" level="INFO">Typing text 'InvalidUser' into text field 'id:txt-username'.</msg>
+<msg time="2026-08-31T12:34:50.388415" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-08-31T12:34:50.388752" level="FAIL">Element with locator 'id:txt-username' not found.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${INVALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2026-08-31T12:34:49.441837" elapsed="1.126235">Element with locator 'id:txt-username' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-31T12:34:50.568401" elapsed="0.000064"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-31T12:34:50.568638" elapsed="0.000046"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INVALID_LOGIN_MESSAGE}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-08-31T12:34:50.568850" elapsed="0.000047"/>
+</kw>
+<doc>Login to Curahealth with invalid credentials</doc>
+<status status="FAIL" start="2026-08-31T12:34:49.441306" elapsed="1.127805">Element with locator 'id:txt-username' not found.</status>
+</kw>
+<doc>This test case verifies that a user can log in with valid credentials.</doc>
+<status status="FAIL" start="2026-08-31T12:34:49.440233" elapsed="1.129391">Element with locator 'id:txt-username' not found.</status>
+</test>
+<test id="s1-t3" name="Check Login With Valid Credentials" line="18">
+<kw name="Login Curahealth" owner="Mykeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-31T12:34:50.572408" level="INFO">Typing text 'John Doe' into text field 'id:txt-username'.</msg>
+<msg time="2026-08-31T12:34:51.515191" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-08-31T12:34:51.515619" level="FAIL">Element with locator 'id:txt-username' not found.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${VALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2026-08-31T12:34:50.571918" elapsed="0.947314">Element with locator 'id:txt-username' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-31T12:34:51.519691" elapsed="0.000091"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-31T12:34:51.520099" elapsed="0.000085"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SUCCESS_LOGIN_MESSAGE}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-08-31T12:34:51.520454" elapsed="0.000078"/>
+</kw>
+<doc>Login to Curahealth with valid credentials</doc>
+<status status="FAIL" start="2026-08-31T12:34:50.571356" elapsed="0.949475">Element with locator 'id:txt-username' not found.</status>
+</kw>
+<doc>This test case verifies that a user can log in with valid credentials.</doc>
+<status status="FAIL" start="2026-08-31T12:34:50.570391" elapsed="0.951080">Element with locator 'id:txt-username' not found.</status>
+</test>
+<test id="s1-t4" name="Verify Appointment Creation" line="22">
+<kw name="Make Appointment" owner="Mykeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-31T12:34:51.525497" level="INFO">Typing text 'Hongkong CURA Healthcare Center' into text field 'id:combo_facility'.</msg>
+<msg time="2026-08-31T12:34:52.468577" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-08-31T12:34:52.468828" level="FAIL">Element with locator 'id:combo_facility' not found.</msg>
+<arg>${FACILITY_FIELD}</arg>
+<arg>${FACILITY_VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2026-08-31T12:34:51.525027" elapsed="0.946188">Element with locator 'id:combo_facility' not found.</status>
+</kw>
+<kw name="Checkbox Should Be Selected ${HOSPITAL_READMISSION_CHECKBOX}">
+<arg>${PROGRAM_RADIO_BUTTON}</arg>
+<status status="NOT RUN" start="2026-08-31T12:34:52.471954" elapsed="0.000077"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${VISIT_DATE_FIELD}</arg>
+<arg>${VISIT_DATE_VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-31T12:34:52.472226" elapsed="0.000048"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${COMMENT_FIELD}</arg>
+<arg>${COMMENT_VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-31T12:34:52.472428" elapsed="0.000043"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${BOOK_APPOINTMENT_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-31T12:34:52.472620" elapsed="0.000049"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SUCCESS_BOOKING_MESSAGE}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-08-31T12:34:52.472823" elapsed="0.000043"/>
+</kw>
+<doc>Make an appointment in Curahealth</doc>
+<status status="FAIL" start="2026-08-31T12:34:51.524570" elapsed="0.948474">Element with locator 'id:combo_facility' not found.</status>
+</kw>
+<doc>This test case verifies that a user can make an appointment successfully.</doc>
+<status status="FAIL" start="2026-08-31T12:34:51.523370" elapsed="0.950193">Element with locator 'id:combo_facility' not found.</status>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-08-31T12:34:52.475055" elapsed="2.683684"/>
+</kw>
+<doc>Validate the homepage and login functionality of the Qabrains website using the Page Object Approach.</doc>
+<status status="FAIL" start="2026-08-31T12:33:28.733271" elapsed="86.425595"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Create Appointment" id="s1" pass="1" fail="3" skip="0">Create Appointment</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
